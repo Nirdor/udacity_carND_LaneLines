@@ -37,7 +37,6 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 ### 2. Identify potential shortcomings with your current pipeline
 
-
 Because i filter my found line segments using their slope, one potential shortcoming would be that if the lane makes a strong turn, any segments which would not cross the bottom border of the image, would be filtered too.
 
 Another shortcoming is that by simply averaging the slopes and drawing a single line through the topmost point the result gets instable near the bottom of the image resulting in jumping around in the video.
@@ -48,3 +47,11 @@ Another shortcoming is that by simply averaging the slopes and drawing a single 
 A possible improvement would be to draw a line by selecting two stable points on found line segments instead of averaging the slopes.
 
 Another potential improvement could be to reduce unwanted line segments by choosing better parameters for the houghlines function instead of filtering them by slope.
+
+
+### 4. Challenge
+
+For the challenge I adjusted the mask, because at the bottom of the image is the engine hood.
+
+Also i tried a segmental approach for selecting,interpolating and drawing the lines.
+
